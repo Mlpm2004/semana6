@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora</title>
+        <script src="sem6listaex7.js" ></script>
+        <style>
+            .espaco {
+                margin:20px;
+            }
+            article {
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                width:  600px;
+                height: 100px;
+                margin:40px;
+
+            }
+            .container {
+                margin-left: 150px;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                border: 2px solid;
+                border-radius: 1rem 1rem 0.5rem 0.5rem;
+                background-color: rgb(167, 165, 165);
+        
+            }
+            section {
+                display :flex ;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <section >
+            <article>
+                <p align="justify">Crie arrow functions para somar, subtrair, multiplicar e dividir valores. Separe-as em módulos e importe em um arquivo chamado index.js. Em uma página HTML exiba dois inputs que recebem números e quatro botões, um que faz cada conta. Exiba o valor abaixo dos botões.
+                </p>
+            </arcicle>
+            <div class="container">
+                <div  class="espaco"><h2>CALCULADORA</h2></div>
+                <div class="espaco"><input type="number" min="" id="numero" name="numero"></div>
+                <div class="espaco" >        
+                    <input type="button" onclick="calcula('+')" value="+">
+                    <input type="button" onclick="calcula('-')" value="-">
+                    <input type="button" onclick="calcula('x')" value="x">
+                    <input type="button" onclick="calcula('/')" value="/">
+                    <input type="button" onclick="calcula('=')" value="=">
+                </div>
+                <div class="espaco"><label style= "background-color:white;" id="conta" ></label>
+            </div>
+
+        </section>
+    </body>
+</html>

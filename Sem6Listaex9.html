@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME</title>
+    <script>
+        let raio=250
+        let tempo=1000
+        let fatored=1
+        let cor=100
+        function zeraContadores(msg){
+                clearTimeout(interrompe)
+                clearTimeout(interrompegame)
+                alert(msg)
+                location.reload(true)
+        }
+        function monitora(){
+            if (raio<=0) zeraContadores("Tente Novamente!!!")
+            if (raio>=500) zeraContadores("Parabéns você Venceu!!!")
+        }
+        function reduz(){
+            cor-=100
+            raio-=fatored
+            document.getElementById('circulo').style.width=raio+"px"    
+            document.getElementById('circulo').style.height=raio+"px" 
+            document.getElementById('circulo').style.backgroundColor= "#"+(parseInt("ff0000", 16) - cor).toString(16)
+document.getElementById('teste').innerHTML="<b>raio = "+raio+" tempo = " +tempo+" Fator de reducao = "+fatored  +"</b>" +" cor "+cor      
+        }
+        function aumenta(){
+            cor+=100
+            raio+=5
+            fatored+=0.3
+            document.getElementById('circulo').style.width=raio+"px"    
+            document.getElementById('circulo').style.height=raio+"px"
+            document.getElementById('circulo').style.backgroundColor= "#"+(parseInt("ff0000", 16) + cor).toString(16)
+document.getElementById('teste').innerHTML="<b> raio = "+raio+"  tempo = " +tempo+"  Fator de reducao = "+fatored +"</b>"+" cor "+cor     
+        }
+   
+
+   </script>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        #circulo {
+            background-color: red;
+            margin: 120px;
+            border-radius: 50%;
+        }
+        .cabecalho {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(72, 255, 0);
+        }
+        button {
+            margin-top: 10px;
+            width: 80%;
+            height: 80px;
+            color:white;
+            font-size: 20px;
+            background-color: rgb(47, 0, 255);
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+
+<body style="background-image: url(backgroundimage_bolas.jpg); background-repeat: no-repeat;background-size: cover;">
+<section class="container cabecalho">
+    <button onclick="interrompegame=setInterval(monitora,300);interrompe=setInterval(reduz, tempo)">Start Game</button>  
+</section>
+<div class="container" >
+    
+    <div id="circulo" onclick="aumenta()"></div>
+</div>
+
+<div class="container">
+    <label id="teste" ></label>
+</div>
+<footer style="background-color: yellow;">
+<p > Pretendemos fazer um mini-game na próxima semana, então veremos uma parte importante da lógica. Precisaremos de</p>
+<p >1. Uma página que possua um círculo no centro.</p>
+<p >2. Esse círculo deve reduzir 1px de altura e largura a cada 1 segundo</p>
+<p >3. Quando clicamos no círculo ele expande 5px de altura e largura</p>
+<p >4. E a cada click no círculo faz com que a redução do círculo aumente 0,3px</p>
+<p >5. A cada 300 milissegundos deve-se validar se o tamanho do círculo é menor que 1px ou maior que 500px. se sim alertar game over e reiniciar a página.</p>
+<p >6. Incremente detalhes a vontade.
+</p>
+</footer>   
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratando de Arquivos</title>
+</head>
+<script>
+    function dropHandler(ev) {
+    
+        console.log('File(s) dropped');
+
+        // Impedir o comportamento padrão (impedir que o arquivo seja aberto)
+        ev.preventDefault();
+
+        if (ev.dataTransfer.items) {
+            // Use a interface DataTransferItemList para acessar o (s) arquivo (s)
+            for (var i = 0; i < ev.dataTransfer.items.length; i++) {
+            // Se os itens soltos não forem arquivos, rejeite-os
+            if (ev.dataTransfer.items[i].kind === 'file') {
+                var file = ev.dataTransfer.items[i].getAsFile();
+                alert('Arquivo inserido : ' + file.name)
+                console.log('... file[' + i + '].name = ' + file.name);
+            }
+            }
+        } else {
+            // Use a interface DataTransfer para acessar o (s) arquivo (s)
+            for (var i = 0; i < ev.dataTransfer.files.length; i++) {
+            console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
+            }
+        }
+    }
+    function dragOverHandler(ev) {
+        console.log('File(s) in drop zone');
+
+        // Impedir o comportamento padrão (impedir que o arquivo seja aberto)
+        ev.preventDefault();
+    }
+</script>
+<style>
+    #drop_zone {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        background-color: yellow;
+        border: 2px solid blue;
+        border-radius: 1rem;
+        width:  600px;
+        height: 100px;
+    }
+    img {
+        width:  40px;
+        height: 40px;
+
+    }
+    article {
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width:  600px;
+        height: 100px;
+        margin:40px;
+
+    }
+   .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+ 
+    }
+
+</style>
+<body>
+
+<div class="container">
+    <section >
+        <h1> Arrastar Arquivo</h1>
+    </section>
+    <article>
+        <p align="justify">Sabemos que o Javascript pode manipular as características de um documento HTML e seus filhos. Por isso, veremos uma forma customizada de receber arquivos de um usuário.</p>
+        <p align="justify">Baseado no <a href=" https://developer.mozilla.org/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop ">link</a>, crie uma página de recebimento de arquivo personalizada, utilizando nossos conhecimentos de manipulação de estilo, crie uma experiência agradável para o usuário</p>
+
+    </article>
+
+    <section>
+        <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+            <img src="pasta-downloads.png">Arraste o Arquivo para cá ...</img>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div>Ícones feitos por <a href="https://www.flaticon.com/br/autores/inkubators" title="inkubators">inkubators</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
+
+    
+</body>
+</html>
