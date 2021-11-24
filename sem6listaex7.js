@@ -31,7 +31,7 @@
                         arraycalculo[i-1]=dividir(parseInt(arraycalculo[i-1],10),parseInt(arraycalculo[i+1],10))
                         arraycalculo.splice(i, 2);
                         flag=false
-                        break
+                        break 
                     }
                 }
                 if (flag){
