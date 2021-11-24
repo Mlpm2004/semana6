@@ -57,6 +57,6 @@
             let conta=""
             for (i in arraycalculo) conta=conta+arraycalculo[i]
             document.getElementById('conta').innerHTML=conta
-            input.value=""
+            input.value="" 
         }
     }
