@@ -82,7 +82,7 @@ function insere_linha(){
 
 
 
-
+ 
 
 
 /*Estamos trabalhando em um e-commerce e precisamos que o usuário possa parcelar o produto que ele está comprando. 
