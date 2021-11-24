@@ -36,7 +36,7 @@ const Je = {
             for(let atributo in ajudante){
                 element.style[atributo] = ajudante[atributo]
             }
-    
+     
         }else{
             throw new Error('O objeto "ajudante" não é de um tipo apropriado.')
         }
