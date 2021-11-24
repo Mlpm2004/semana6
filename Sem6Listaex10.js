@@ -38,7 +38,7 @@ class Produtos {
     }
 
 }
-//NÂO HÁ O QUE FATORAR
+//NÂO HÁ O QUE FATORAR  
 const produto1= new Produtos("Camiseta Polo"    ,"camisa.jpg"   ,250,5)
 const produto2= new Produtos("Calça Jeans"      ,"calca.jpg"    ,500,6)
 const produto3= new Produtos("Moleton"          ,"moletom.jpg"  ,400,7)
