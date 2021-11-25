@@ -1,3 +1,6 @@
-//const somar = (numero1, numero2)=> numero1+numero2
-//const dividir = (numero1, numero2)=> numero1/numero2
-import {somar,dividir} from "http://localhost/DEVinHouse/Sem6Listaex5.js" 
+import {somar,dividir} from "./Sem6Listaex5.js"
+let soma=somar(parseInt(window.prompt("insira a nota 1"),10),0)
+soma=somar(parseInt(window.prompt("insira a nota 2"),10),soma)
+alert( "A Média é : "+dividir(somar(soma,parseInt(window.prompt("insira a nota 3"),10)),3))
+
+    
