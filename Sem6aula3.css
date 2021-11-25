@@ -1,0 +1,38 @@
+        .externo{
+            display: flex; 
+            justify-content: center;
+            align-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        .container{
+            display: flex;
+            height: 500px;
+            width: 800px;
+            background-color: blanchedalmond;
+        }
+        .coluna{
+            width: 400px;           
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+       }
+        img {
+            width: 250px;
+            height: 250px;
+        }
+        input,textarea {
+            width: 100%;
+            background-color: yellow;
+            border: 1px snow;
+            border-radius: 0.5rem;
+            padding: 10px
+         }
+       button {
+            width: 100%;
+         }
+        .linha {
+            width: 370px;
+            margin: 20px 5px 10px 5px;
+        }
