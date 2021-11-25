@@ -1,0 +1,7 @@
+    export const btsoma         = document.querySelector("#btsoma")
+    export const btsubtrai      = document.querySelector("#btsubtrai")
+    export const btmultiplica   = document.querySelector("#btmultiplica")
+    export const btigual        = document.querySelector("#btigual")
+    export const btdivide       = document.querySelector("#btdivide")
+    export const input          = document.querySelector("#numero")
+    export const resultado      = document.getElementById('conta')

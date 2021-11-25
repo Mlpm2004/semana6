@@ -1,0 +1,29 @@
+            .espaco {
+                margin:20px;
+            }
+            article {
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                width:  600px;
+                height: 100px;
+                margin:40px;
+            }
+            .container {
+                margin-left: 150px;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                border: 2px solid;
+                border-radius: 1rem 1rem 0.5rem 0.5rem;
+                background-color: rgb(167, 165, 165);
+            }
+            section {
+                display :flex ;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+            }
