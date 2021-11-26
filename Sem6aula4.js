@@ -1,11 +1,9 @@
-import { bt5m,bt10m,bt15m,btinicio,btpara,relogio } from "./Sem6aula4._selector";
+import { botao,btinicio,btpara,relogio } from "./Sem6aula4_selector";
 let tempo=0
 let temporizador=0
-bt5m.addEventListener('click',()=>setValor('300'))
-bt10m.addEventListener('click',()=>setValor('600'))
-bt15m.addEventListener('click',()=>setValor('900'))
+for (let i=0; i<botao.length;i++) botao[i].addEventListener('click',()=>setValor(botao[i].name))
 btinicio.addEventListener('click',()=>startTemp())
-btpara.addEventListener('click',()=>stopTemp())
+btpara.addEventListener('click',()=>stopTemp()) 
 function setValor(tmp){
     tempo=tmp
     let minuto=tempo/60
